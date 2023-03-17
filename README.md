@@ -8,6 +8,10 @@ subjects from 1 to 13 but the default number of subjects is 8.
 
 # Download
 
+[Download windows executable setup](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.1/SGPA_Calculator_Setup.exe)
+
+[Download Java 11+ Jar](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.1/SGPACalculatorGUI.jar)
+
 To download this application go to the releases section of GitHub page of
 this project and download the setup executable if you don't want to install
 Java 11+ or you can download the jar file and execute it using the ``java -jar filename.jar`` command.
