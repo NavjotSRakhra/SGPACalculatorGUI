@@ -66,6 +66,7 @@ public class GUI {
         submit.addActionListener(this::submitButtonClicked);
         submit.setFont(DEFAULT_TEXT_FONT);
         submit.setBackground(COLOR_PALETTE[2]);
+        submit.setForeground(COLOR_PALETTE[1]);
         submit.setBorder(BLACK_LINE_BORDER);
         submit.addKeyListener(new KeyAdapter() {
             @Override
@@ -137,6 +138,7 @@ public class GUI {
 
     private void initializeCalculateSGPAButton() {
         calculateSGPA.setBackground(COLOR_PALETTE[2]);
+        calculateSGPA.setForeground(COLOR_PALETTE[1]);
         calculateSGPA.setBorder(BLACK_LINE_BORDER);
         calculateSGPA.addActionListener(this::calculateSGPA);
         calculateSGPA.setFont(DEFAULT_TEXT_FONT);
