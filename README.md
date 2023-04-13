@@ -1,5 +1,11 @@
 # SGPA Calculator
 
+* [Introduction](#introduction)
+* [Download](#download)
+* [How to use](#how-to-use)
+* [Technologies used](#technologies-used)
+* [Dependencies](#dependencies)
+
 # Introduction
 
 This is an application that can be used to calculate the SGPA/GPA of
@@ -47,6 +53,7 @@ This project uses SGPACalculator from maven central. To use it in your own
 project add the following to your ```POM.xml```
 
     <dependencies>
+        ...
         <dependency>
             <groupId>io.github.NavjotSRakhra</groupId>
             <artifactId>SGPACalculator</artifactId>
