@@ -7,7 +7,6 @@ import navjot.sgpaCalculatorGUI.gui.textField.FocusJTextField;
 import navjot.sgpaCalculatorGUI.textVerifier.NumericTextVerifier;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
@@ -19,12 +18,10 @@ public class GUI {
             SUBJECT_COLUMN_TITLE = "Subject number", GRADE_COLUMN_TITLE = "Grade", CREDITS_COLUMN_TITLE = "Credits", DEFAULT_SUBJECTS_COUNT = "8",
             ERROR_MESSAGE_INVALID_INPUT_IN_SUBJECTS = "Please enter an integral number between 0 and 13 in the number of subjects input",
             ERROR_MESSAGE_INVALID_INPUT_IN_CREDITS = "Please enter an integral number in the credits input";
-    private final static LineBorder GRAY_LINE_BORDER = new LineBorder(Color.GRAY, 1, true), BLACK_LINE_BORDER = new LineBorder(Color.BLACK, 1, true);
     private final static Font DEFAULT_TEXT_FONT = new Font(Font.MONOSPACED, Font.PLAIN, 15);
-    private final static Color[] COLOR_PALETTE = new Color[]{Color.BLACK, Color.DARK_GRAY, Color.GRAY, Color.WHITE, Color.LIGHT_GRAY};
     private final static int WINDOW_SIDE = 250;
-    private final static int WINDOW_SIDE_LARGE = 600;
-    private final static int WINDOW_SIDE_MEDIUM = 400;
+    private final static int WINDOW_HEIGHT = 800;
+    private final static int WINDOW_WIDTH = 425;
     private final JFrame mainFrame;
     private final JPanel mainPanel;
     private final JLabel subjectInputLabel;
@@ -46,9 +43,8 @@ public class GUI {
         initializeTextFieldAndButton();
         initializeCalculateSGPAButton();
         initializeMainPanel();
-        initializeMainFrame();
-
         simulateEnteredEightSubjectsAndSubmitButtonClicked();
+        initializeMainFrame();
     }
 
     private void simulateEnteredEightSubjectsAndSubmitButtonClicked() {
@@ -58,16 +54,10 @@ public class GUI {
 
     private void initializeTextFieldAndButton() {
         subjectInputTextField.setInputVerifier(new NumericTextVerifier());
-        subjectInputTextField.setBackground(COLOR_PALETTE[1]);
-        subjectInputTextField.setBorder(GRAY_LINE_BORDER);
-        subjectInputTextField.setForeground(COLOR_PALETTE[3]);
         subjectInputTextField.setFont(DEFAULT_TEXT_FONT);
 
         submit.addActionListener(this::submitButtonClicked);
         submit.setFont(DEFAULT_TEXT_FONT);
-        submit.setBackground(COLOR_PALETTE[2]);
-        submit.setForeground(COLOR_PALETTE[1]);
-        submit.setBorder(BLACK_LINE_BORDER);
         submit.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -100,7 +90,9 @@ public class GUI {
 
         mainPanel.removeAll();
         initializeMainPanel();
-        mainPanel.setPreferredSize(new Dimension(WINDOW_SIDE_MEDIUM, WINDOW_SIDE_LARGE));
+        int height = (int) (mainPanel.getLayout().preferredLayoutSize(mainPanel).getHeight() * (Math.pow((size + 1), 1.00003)));
+        height = Math.max(Math.min(height, WINDOW_HEIGHT), WINDOW_SIDE);
+        mainPanel.setPreferredSize(new Dimension(WINDOW_WIDTH, height));
 
         initializeNewItems(size);
         addNewItemsToMainPanel();
@@ -114,12 +106,10 @@ public class GUI {
 
         for (int i = 0; i < subjects.length; i++) {
             subjects[i] = new JLabel(SUBJECT + (i + 1));
-            subjects[i].setForeground(COLOR_PALETTE[4]);
             subjects[i].setFont(DEFAULT_TEXT_FONT);
         }
         for (int i = 0; i < gradeOptions.length; i++) {
             gradeOptions[i] = new JComboBox<>();
-            gradeOptions[i].setBackground(COLOR_PALETTE[2]);
             gradeOptions[i].setFont(DEFAULT_TEXT_FONT);
 
             for (Grade value : Grade.values()) {
@@ -129,17 +119,11 @@ public class GUI {
         for (int i = 0; i < credits.length; i++) {
             credits[i] = new FocusJTextField();
             credits[i].setInputVerifier(new NumericTextVerifier());
-            credits[i].setBackground(COLOR_PALETTE[1]);
-            credits[i].setBorder(GRAY_LINE_BORDER);
-            credits[i].setForeground(COLOR_PALETTE[3]);
             credits[i].setFont(DEFAULT_TEXT_FONT);
         }
     }
 
     private void initializeCalculateSGPAButton() {
-        calculateSGPA.setBackground(COLOR_PALETTE[2]);
-        calculateSGPA.setForeground(COLOR_PALETTE[1]);
-        calculateSGPA.setBorder(BLACK_LINE_BORDER);
         calculateSGPA.addActionListener(this::calculateSGPA);
         calculateSGPA.setFont(DEFAULT_TEXT_FONT);
         calculateSGPA.addKeyListener(new KeyAdapter() {
@@ -166,7 +150,6 @@ public class GUI {
         g.gridwidth = 1;
 
         JLabel subjectColumnTitle = new JLabel(SUBJECT_COLUMN_TITLE);
-        subjectColumnTitle.setForeground(COLOR_PALETTE[3]);
         subjectColumnTitle.setFont(DEFAULT_TEXT_FONT);
 
         mainPanel.add(subjectColumnTitle, g);
@@ -175,7 +158,6 @@ public class GUI {
         g.gridx++;
 
         JLabel gradeColumnTitle = new JLabel(GRADE_COLUMN_TITLE);
-        gradeColumnTitle.setForeground(COLOR_PALETTE[3]);
         gradeColumnTitle.setFont(DEFAULT_TEXT_FONT);
 
         mainPanel.add(gradeColumnTitle, g);
@@ -184,7 +166,6 @@ public class GUI {
         g.gridx++;
 
         JLabel creditsColumnTitle = new JLabel(CREDITS_COLUMN_TITLE);
-        creditsColumnTitle.setForeground(COLOR_PALETTE[3]);
         creditsColumnTitle.setFont(DEFAULT_TEXT_FONT);
 
         mainPanel.add(creditsColumnTitle, g);
@@ -238,7 +219,6 @@ public class GUI {
     }
 
     private void initializeMainPanel() {
-        mainPanel.setBackground(COLOR_PALETTE[1]);
         mainPanel.setPreferredSize(new Dimension(WINDOW_SIDE, WINDOW_SIDE));
         mainPanel.setLayout(new GridBagLayout());
         GridBagConstraints g = new GridBagConstraints();
@@ -250,7 +230,6 @@ public class GUI {
         g.gridx = 0;
         g.gridy = 0;
 
-        subjectInputLabel.setForeground(COLOR_PALETTE[3]);
         subjectInputLabel.setFont(DEFAULT_TEXT_FONT);
 
         mainPanel.add(subjectInputLabel, g);
@@ -274,7 +253,6 @@ public class GUI {
         g.weightx = 0.0;
 
         JLabel credits = new JLabel(CREDITS, SwingConstants.CENTER);
-        credits.setForeground(COLOR_PALETTE[3]);
         credits.setFont(DEFAULT_TEXT_FONT);
 
         mainPanel.add(credits, g);
@@ -285,6 +263,7 @@ public class GUI {
         mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         mainFrame.pack();
         mainFrame.setTitle(TITLE_OF_APPLICATION);
+        mainFrame.setLocationRelativeTo(null);
         mainFrame.setVisible(true);
     }
 }
