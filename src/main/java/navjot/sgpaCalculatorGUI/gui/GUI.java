@@ -20,7 +20,7 @@ public class GUI {
             ERROR_MESSAGE_INVALID_INPUT_IN_CREDITS = "Please enter an integral number in the credits input";
     private final static Font DEFAULT_TEXT_FONT = new Font(Font.MONOSPACED, Font.PLAIN, 15);
     private final static int WINDOW_SIDE = 250;
-    private final static int WINDOW_HEIGHT = 800;
+    private final static int WINDOW_HEIGHT = 700;
     private final static int WINDOW_WIDTH = 425;
     private final JFrame mainFrame;
     private final JPanel mainPanel;
