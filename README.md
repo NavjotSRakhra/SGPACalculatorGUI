@@ -18,7 +18,7 @@ subjects from 1 to 13 but the default number of subjects is 8.
 
 [Download Java 11+ Jar](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.1/SGPACalculatorGUI.jar)
 
-[Download Android apk file (Android 8 and above)](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.2/SGPA_Calculator_v1.0.4.apk)
+[Download Android apk file (Android 8 and above)](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.2/SGPA_Calculator_v1.0.5.apk)
 
 To download this application go to the releases section of GitHub page of
 this project and download the setup executable if you don't want to install
