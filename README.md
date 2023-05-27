@@ -10,7 +10,8 @@
 
 This is an application that can be used to calculate the SGPA/GPA of
 subjects by entering their grades and credits. It can have any number of
-subjects from 1 to 13 but the default number of subjects is 8.
+subjects from 1 to 13 but the default number of subjects is 8. It is meant
+to work for SGPA calculation for Chandigarh University (CU).
 
 # Download
 
@@ -23,6 +24,7 @@ subjects from 1 to 13 but the default number of subjects is 8.
 To download this application go to the releases section of GitHub page of
 this project and download the setup executable if you don't want to install
 Java 11+ or you can download the jar file and execute it using the ``java -jar filename.jar`` command.
+You can also Download and install the APK to calculate SGPA in android.
 
 # How to use
 
