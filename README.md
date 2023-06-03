@@ -15,7 +15,7 @@ to work for SGPA calculation for Chandigarh University (CU).
 
 # Download
 
-[Download windows executable setup](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.1/SGPA_Calculator_Setup.exe)
+[Download Windows executable setup](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.1/SGPA_Calculator_Setup.exe)
 
 [Download Java 11+ Jar](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.1/SGPACalculatorGUI.jar)
 
