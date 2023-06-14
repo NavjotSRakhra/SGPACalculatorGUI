@@ -61,7 +61,36 @@ project add the following to your ```POM.xml```
         <dependency>
             <groupId>io.github.NavjotSRakhra</groupId>
             <artifactId>SGPACalculator</artifactId>
-            <version>1.0</version>
+            <version>1.1.0</version>
         </dependency>
         ...
     </dependencies>
+
+# License
+
+Copyright © 2023 Navjot Singh Rakhra
+
+Non-Commercial Contribution and Access License
+
+Version 1.0, June, 14 2023
+
+Permission is hereby granted, free of charge, to any person or organization ("Contributor") obtaining a copy of this software and associated documentation files (the "Software"), to contribute to the Software and use it for non-commercial purposes, subject to the following conditions:
+
+1. Contributions:
+   By contributing to this project, Contributor agrees to grant the project's copyright holder ("Copyright Holder") a worldwide, non-exclusive, irrevocable, royalty-free license to access, use, modify, reproduce, distribute, prepare derivative works of, display, and perform the contributions, including any intellectual property rights therein, for the purposes of developing, maintaining, and promoting the project.
+
+2. Non-Commercial Use:
+   Any person or organization using the Software for non-commercial purposes is granted a worldwide, non-exclusive, royalty-free license to use, reproduce, distribute, prepare derivative works of, and display the Software, in source or object code form, with or without modification, subject to the following conditions:
+   (a) The Software may not be used for any commercial purposes without obtaining a separate license from the Copyright Holder.
+   (b) Redistributions of the Software in source code form must retain the above copyright notice, this list of conditions, and the following disclaimer.
+   (c) Redistributions of the Software in object code form must reproduce the above copyright notice, this list of conditions, and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Commercial Use:
+   For any commercial use of the Software, the Contributor must obtain a separate license from the Copyright Holder.
+
+4. No Warranty:
+   The Software is provided "as is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. The Copyright Holder, Contributors, and any other party involved in the creation, production, or delivery of the Software shall not be liable for any direct, indirect, incidental, special, exemplary, or consequential damages, including but not limited to loss of profits, data, or use, arising in any way out of the use or performance of the Software.
+
+5. Governing Law:
+   This license shall be governed by and construed in accordance with the laws of India. Any legal disputes arising out of or in connection with this license shall be subject to the exclusive jurisdiction of the courts in Punjab, India.
+   
