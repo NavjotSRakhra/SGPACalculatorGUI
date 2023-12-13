@@ -15,11 +15,11 @@ to work for SGPA calculation for Chandigarh University (CU).
 
 # Download
 
-[Download Windows executable setup](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.0.7/SGPA_Calculator_Setup.exe)
+[Download Windows executable setup](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.0.10/SGPA_Calculator_Setup.exe)
 
-[Download Java 11+ Jar](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.0.7/SGPA_Calculator.jar)
+[Download Java 11+ Jar](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.0.10/SGPA_Calculator.jar)
 
-[Download Android apk file (Android 8 and above)](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.0.9/SGPA_Calculator_v1.0.9.apk)
+[Download Android apk file (Android 8 and above)](https://github.com/NavjotSRakhra/SGPACalculatorGUI/releases/download/1.0.10/SGPA_Calculator_v1.0.10.apk)
 
 To download this application go to the releases section of GitHub page of
 this project and download the setup executable if you don't want to install
